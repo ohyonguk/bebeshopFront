@@ -3,12 +3,12 @@ bebeshop_front
 
 이 프로젝트에는 화면단 구성과 데이터를 가공해 api 서버로 넘겨서 받아온 데이터에 대한 처리 진행
 
-사용 기술
-spring boot 3.2.5
-Gradle
-JPA,PostgreSQL
-ajax, thymeleaf, jquery, javascript
-git
+사용 기술<br>
+spring boot 3.2.5<br>
+Gradle<br>
+JPA,PostgreSQL<br>
+ajax, thymeleaf, jquery, javascript<br>
+git<br>
 
 개발 기간
 2024-05-20 ~
