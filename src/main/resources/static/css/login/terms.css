@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.outbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* �넂�씠瑜� 湲곗��쑝濡� 媛��슫�뜲 �젙�젹 */
+  height: 100vh;
+  background-color: #fff;
+}
+div h1 {
+  /* 湲��옄 媛��슫�뜲 �젙�젹 */
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.constent {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid #badbf9;
+  width: 325px;
+  height: 550px;
+}
+.constent h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* �빟愿��궡�슜 */
+.constent .text {
+  margin-bottom: 5px;
+  resize: none;
+}
+.constent .text1 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  resize: none;
+}
+/* �룞�쓽 泥댄겕諛뺤뒪 */
+.constent div .agr {
+  width: 15px;
+  height: 25px;
+  margin-left: 120px;
+}
+.constent .checkbox .agr + label {
+  position: relative;
+  top: -8px;
+  left: 5px;
+  font-size: 10px;
+  color: black;
+}
+/* 鍮꾨룞�쓽 泥댄겕諛뺤뒪*/
+.constent div .disagr {
+  width: 15px;
+  height: 25px;
+  margin-left: 20px;
+}
+.constent .checkbox .disagr + label {
+  position: relative;
+  top: -8px;
+  left: 5px;
+  font-size: 10px;
+  color: #707070;
+}
+.constent .btn {
+  width: 250px;
+  height: 35px;
+  margin: 1px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+.constent .btn:hover {
+  color: #badbf9;
+  background-color: white;
+}

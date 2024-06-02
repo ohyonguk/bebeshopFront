@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*나의 활동 위쪽 css*/
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1150px;
+}
+
+.black>h4 {
+    margin: 10px;
+}
+
+#log_date {
+/*     margin-left: 10px; */
+    width: 115px;
+    height: 23px;
+    font-size: 12px;
+    box-shadow: 1px 1px 1px 1px #cfcfcf;
+    border: #cfcfcf solid 1px;
+    margin-bottom: 2px;
+}
+
+#select {
+    margin-bottom: 2px;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    box-shadow: 1px 1px 1px 1px #cfcfcf;
+    border: #cfcfcf solid 1px;
+}
+
+#btn {
+    width: 90px;
+    height: 25px;
+    background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: 1px #badbf9;
+    box-shadow: 1px 1px 1px 1px #cfcfcf;
+}
+
+#btn:hover {
+    color: #badbf9;
+    background-color: white;
+}
+
+
+/* 나의 활동 테이블 부분*/
+
+.log_table table {
+    width: 1150px;
+    text-align: center;
+}
+
+.log_table th {
+    background-color: #e4e4e4;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+}
+
+ #table_date {
+    width: 150px;
+}
+
+#table_select {
+    width: 130px;
+}
+
+#table_content {
+    width: 600px;
+} 
+
+.log_table td {
+    font-size: 12px;
+    height: 35px;
+    border-bottom: #cfcfcf 2px solid;
+}
+
+.mainbox .purchase .name3 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.menu:nth-of-type(2) {
+    transform: scale3d(1.2, 1.2, 0.3) translate(-7%, -5%);
+}

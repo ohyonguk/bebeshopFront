@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.outbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* �넂�씠瑜� 湲곗��쑝濡� 媛��슫�뜲 �젙�젹 */
+  height: 100vh;
+  background-color: #fff;
+}
+
+.findpasswd {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #badbf9;
+  width: 325px;
+  height: 370px;
+}
+.outbox img {
+  margin-top: 20px;
+}
+.findpasswd h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.findpasswd .write {
+  height: 175px;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 5px dotted #badbf9;
+  border-bottom: 5px dotted #badbf9;
+}
+.findpasswd .write .text {
+  border: 1px solid #707070;
+  width: 230px;
+  height: 30px;
+  text-align: center;
+}
+.findpasswd .write .textan {
+  margin-top: 5px;
+  border: 1px solid #707070;
+  width: 230px;
+  height: 30px;
+  text-align: center;
+}
+.findpasswd .write .btn {
+  font-size: 12px;
+  width: 40px;
+  height: 23px;
+  margin: 5px;
+  background-color: white;
+  color: #badbf9;
+  font-weight: bold;
+  border: 1px black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.findpasswd .write .btn:hover {
+  font-size: 12px;
+  width: 40px;
+  height: 20px;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  background-color: #badbf9;
+  font-weight: bold;
+  border: 1px black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.findpasswd .secondinfo {
+  width: 100%;
+  height: 70px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+}
+.btn_info {
+  margin-right: 2px;
+  margin-left: 2px;
+  width: 93px;
+  height: 27px;
+  color: white;
+  background-color: #badbf9;
+  font-weight: bold;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn_info:hover {
+  margin-right: 2px;
+  margin-left: 2px;
+  width: 93px;
+  height: 27px;
+  color: #badbf9;
+  background-color: white;
+  font-weight: bold;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.findpasswd .write .select1 {
+  width: 230px;
+  height: 30px;
+  margin-top: 20px;
+}

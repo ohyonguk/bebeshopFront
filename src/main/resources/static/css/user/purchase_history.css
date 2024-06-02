@@ -1,0 +1,90 @@
+.mainbox .orderbx {
+  margin-bottom: 100px;
+}
+
+.mainbox .orderbx .title {
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.mainbox .orderbx .name3 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mainbox .orderbx .order {
+    display:flex;
+  border-top: 3px solid black;
+}
+
+.mainbox .orderbx .order th {
+  font-size: 14px;
+  font-weight: 100;
+  padding: 10px;
+  background-color: #e4e4e4;
+}
+
+.mainbox .orderbx .order td {
+  border-bottom: 2px solid #e4e4e4;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.mainbox .orderbx .order td h2 {
+  font-size: 15px;
+  margin: 5px;
+  font-weight: 100;
+}
+
+.mainbox .orderbx .order td h1 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#postBtn {
+  width: 60px;
+  height: 30px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+#postBtn:hover {
+  color: #badbf9;
+  background-color: white;
+}
+
+#purchaseBtn {
+  width: 60px;
+  height: 30px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+
+.purchaseBtn1 {
+  width: 60px;
+  height: 30px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+
+.purchaseBtn1:hover {
+  color: #badbf9;
+  background-color: white;
+}
+
+#purchaseBtn:hover {
+  color: #badbf9;
+  background-color: white;
+}
+
+.menu:nth-of-type(4) {
+  transform: scale3d(1.2, 1.2, 0.3) translate(-7%, -5%);
+}

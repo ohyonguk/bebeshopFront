@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #badbf9;
+}
+.main {
+  height: 750px;
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.FAQ {
+  padding: 120px 0px 0px 0px;
+  width: 80%;
+  margin: auto;
+}
+.FAQ table tr td a{
+  text-decoration: none;
+  color: black;
+}
+
+.notice {
+  padding: 30px 0px 0px 0px;
+  width: 80%;
+  margin: auto;
+}
+.notice tr td a{
+  text-decoration: none;
+  color: black;
+}
+
+.buttonMenu h2,
+.button {
+  display: inline-block;
+}
+
+.button {
+  float: right;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  background-color: #badbf9;
+  border: 2px #badbf9;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.button:hover {
+  color: #badbf9;
+  background-color: white;
+}
+
+table {
+  width: 100%;
+  border-top: 1px solid #707070;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  background-color: #e4e4e4;
+}
+th,
+td {
+  height: 25px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 2px solid #e4e4e4;
+}
+.next {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.next ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.next ul li a{
+  text-decoration: none;
+  color: black;
+}
+.next ul .active a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.next ul li i {
+  margin-right: 2px;
+  margin-left: 2px;
+}

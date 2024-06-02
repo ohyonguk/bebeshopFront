@@ -1,0 +1,28 @@
+#selectboxSize,#selectboxColor{
+    width: 175px;
+}
+
+.button {
+    width: 60px;
+    height: 30px;
+    background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: 1px #badbf9;
+    text-align: center;
+}
+
+.button:hover {
+    color: #badbf9;
+    background-color: white;
+}
+
+#addOp{
+	margin-left: 240px;
+}
+input, select {
+	width: 170px;
+	height: 25px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}

@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #badbf9;
+   	
+}
+a{
+    text-decoration-line: none;
+    color:black;
+}
+.nope{
+    height: 100px;
+}
+.main{ 
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 100%;
+}
+
+ul,li{
+    list-style: none;
+}
+
+/* -----------------理쒖떊�닚.�씤湲곗닚.媛�寃⑹닚--------------------- */
+.list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    font-size: 17px;
+    width: 800px;
+    
+}
+.list h6 a{
+    text-decoration-line: none;
+    color: black;
+}
+.list h6 a:active{
+    text-decoration: underline;
+}
+/* -----------------硫붿씤�쁺�뿭(寃��깋�솕硫�)--------------------- */
+
+.main .pronav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.categorywrap{
+    margin: 10px 0 20px 0;
+
+}
+.categorywrap > ul {
+    display: flex;
+    justify-content: center;
+  }
+  .categorywrap > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 22px 10px 22px;
+  }
+  .categorywrap .drop-down ul {
+    display: block;
+    width: 130px;
+    position: absolute;
+    left: 25px;
+    top: calc(100% + 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .categorywrap .drop-down ul .drop-down ul{
+    left: 131px;
+    top: 0;
+  }
+  .categorywrap .drop-down:hover > ul {
+    opacity: 0.9;
+    top: 100%;
+    visibility: visible;
+  }
+  .categorywrap .drop-down li {
+    min-width: 100px;
+    position: relative;
+    padding: 10px 10px;
+  }
+  .categorywrap .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #2a2a2a;
+  }
+  
+.main .pronav .probxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 1000px;
+}
+.main .pronav .probxs .probx:hover{
+    box-shadow: 3px 3px 10px gray ;
+    border: 1px solid #7070;
+}
+.main .pronav .probxs .probx img{
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 5px 5px 3px #0909094a;
+}
+.main .pronav .probxs .probx a{
+    text-decoration: none;
+    color: black;
+}
+.main .pronav .probxs .probx a h1{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .pronav .probxs .probx a .price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.main .pronav .probxs .probx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.main .pronav .probxs .probx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.pager{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.pager ul {
+     text-align: center;
+}
+
+.pager ul li{ 
+    display: inline-block;
+}
+
+.text-orange{
+	color : #ff6a00;	    	
+}
+.text-bold{
+	font-weight: bold;
+}
+
+.nosearch{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 1000px;
+    height: 770px;
+	
+}
+
+#subName{
+margin-right: 100px;
+}

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.outbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* �넂�씠瑜� 湲곗��쑝濡� 媛��슫�뜲 �젙�젹 */
+  height: 100vh;
+  background-color: #fff;
+}
+div h1 {
+  /* 湲��옄 媛��슫�뜲 �젙�젹 */
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.signup {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid #badbf9;
+  width: 325px;
+  height: 430px;
+}
+/* �쉶�썝媛��엯 */
+.signup h1 {
+  font-size: 20px;
+  font-family: "留묒� 怨좊뵓", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* �븘�씠�뵒 鍮꾨쾲�벑 */
+.signup .info label {
+  padding-top: 5px;
+  margin-left: 30px;
+  color: black;
+  font-size: 10px;
+  float: left;
+}
+/* id移� 議곗젅 */
+.signup .id {
+  width: 250px;
+  height: 25px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  border: 1px solid #707070;
+}
+.signup .passwd {
+  width: 250px;
+  height: 25px;
+  margin-left: -10px;
+  margin-bottom: 5px;
+  border: 1px solid #707070;
+}
+.signup .repasswd {
+  width: 250px;
+  height: 25px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  border: 1px solid #707070;
+}
+.signup .email {
+  width: 120px;
+  height: 25px;
+  margin-left: 5px;
+  outline: #707070;
+}
+
+.signup .select2 {
+  width: 120px;
+  font-size: 10px;
+  height: 25px;
+}
+
+.signup .select1 {
+  width: 260px;
+  height: 25px;
+}
+.signup .answer {
+  width: 260px;
+  height: 25px;
+  margin-top: 5px;
+}
+input::placeholder {
+  color: #707070;
+  padding-left: 15px;
+  font-size: 10px;
+  font-family: "留묒�怨좊뵓";
+}
+.signup .btn {
+  width: 250px;
+  height: 35px;
+  margin: 15px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+.signup .btn:hover {
+  color: #badbf9;
+  background-color: white;
+}

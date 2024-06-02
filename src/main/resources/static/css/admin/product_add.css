@@ -1,0 +1,132 @@
+.purchase {
+    width: 1150px;
+    margin-bottom: 10px;
+}
+
+.purchase>h4 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.log {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 60px;
+    height: 30px;
+    background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: 1px #badbf9;
+}
+
+.button:hover {
+    color: #badbf9;
+    background-color: white;
+}
+
+#addndel {
+    margin: 10px;
+}
+
+.sizebtn input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.sizebtn label {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#imgbox input {
+    width: 200px;
+    height: 30px;
+    margin: 2px;
+    /* background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: 1px #badbf9; */
+}
+
+
+/* #imgbox input:hover {
+    color: #badbf9;
+    background-color: white;
+} */
+
+.sizebtn input:hover {
+    color: #badbf9;
+    background-color: white;
+}
+
+.colorbtn {
+    display: flex;
+}
+
+.colorbtn .color {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border: 1px black solid;
+}
+
+.colorbtn input {
+    width: 20px;
+    height: 20px;
+    /* border: 1px black solid; */
+    margin: 10px;
+}
+
+#subbox {
+    display: flex;
+}
+
+#infobox {
+    width: 400px;
+}
+
+#imgbox {
+    height: 500px;
+    width: 700px;
+    margin: 20px;
+}
+
+#infobox>div>input {
+    width: 300px;
+    height: 30px;
+}
+
+#infobox>div {
+    margin: 20px;
+}
+
+.imgsubbox {
+    display: flex;
+    margin-top: 20px;
+}
+
+.imgsubbox div {
+    width: 150px;
+    height: 150px;
+    background-color:#badbf9;
+    margin : 10px;
+}
+
+.menu:nth-of-type(2) {
+    transform: scale3d(1.2, 1.2, 0.3) translate(-7%, -5%);
+}
+
+select {
+	width: 250px;
+	height: 30px;
+}
+

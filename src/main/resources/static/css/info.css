@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 90%;
+  border-top: black solid 3px;
+  border-bottom: black solid 3px;
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: solid #cfcfcf 2px;
+  height: 35px;
+}
+
+/* 회원정보 */
+
+.info {
+  height: 50px;
+  width: 100%;
+}
+
+.fixinfo {
+  background-color: #e4e4e4;
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+.fixinfo input .error {
+  border: 1px solid red;
+}
+.fixinfo p {
+  font-size: 12px;
+  color: red;
+}
+
+.userinfo {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+/* 비밀번호 변경 */
+
+.passwd {
+  margin-top: 80px;
+}
+
+.passwd > h4 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.passwd > h5 {
+  padding-bottom: 20px;
+}
+
+.passwd input {
+  width: 500px;
+  border-color: #e4e4e4;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #cfcfcf;
+  height: 20px;
+}
+
+.pw {
+  padding-left: 20px;
+}
+
+/* 버튼 */
+
+.bt {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#button {
+  border: #cfcfcf solid 2px;
+  background-color: white;
+  width: 80px;
+  font-size: 10px;
+  box-shadow: 1px 1px 1px 1px #cfcfcf;
+}
+
+.menu:nth-of-type(1) {
+  transform: scale3d(1.2, 1.2, 0.3) translate(-7%, -5%);
+}
+
+.purchase {
+  width: 1150px;
+  margin-bottom: 10px;
+}
+
+.purchase > h4 {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: #badbf9;
+    color: white;
+    font-weight: bold;
+    border: 1px #badbf9;
+}
+
+.button:hover {
+    color: #badbf9;
+    background-color: white;
+
+}
+
+.menu:nth-of-type(1) {
+  transform: scale3d(1.2, 1.2, 0.3) translate(-7%, -5%);
+}

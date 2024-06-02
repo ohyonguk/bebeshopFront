@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	background-color: #fff;
+}
+/* 눈에 보이지 않는 박스를 이용하여 전체 화면을 잡음 */
+.outbx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 높이를 기준으로 가운데 정렬 */
+  height: 100vh;
+  background-color: #fff;
+}
+div h1 {
+  /* 글자 가운데 정렬 */
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* 하늘색 사각형을 가운데로 위치 시키면 사이즈 조정 */
+.login {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid #badbf9;
+  width: 325px;
+  height: 430px;
+}
+.login h1 {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+/* 패스워드 아이디 크기 및 위치 조절 */
+.login .id {
+  width: 250px;
+  height: 30px;
+  margin: 10px;
+}
+.login .passwd {
+  width: 250px;
+  height: 30px;
+  margin: 10px;
+}
+/* input안에 placeholder 위치 조정 */
+input::placeholder {
+  color: #707070;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* 크게 박스로 잡아 한번에 정렬 */
+.login .checkbx {
+  float: left;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* 체크박스 크기 조절 */
+.login div .check {
+  width: 15px;
+  height: 25px;
+  margin-left: 5px;
+}
+/* 체크박스 옆 글자를 움직이기 위해 postion과 top을 이용 */
+.login .checkbx .check + label {
+  position: relative;
+  top: 3px;
+  font-size: 10px;
+  color: #707070;
+}
+/* 로그인 버튼 */
+.login .btn {
+  width: 250px;
+  height: 35px;
+  margin: 15px;
+  background-color: #badbf9;
+  color: white;
+  /* 폰트를 두껍게해서 검은색을 강조 */
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+.login .btn:hover {
+  color: #badbf9;
+  background-color: white;
+}
+/* 비밀번호, 아이디, 회원가입 */
+.login .found {
+  display: flex;
+  align-items: center;
+  margin-left: 55px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.login .found h6 a {
+  text-decoration-line: none;
+  color: #707070;
+}
+
+
+/* 카카오 페이스북 네이버*/  
+.login .social {
+  margin-top: 20px;
+  margin-left: 80px;
+}
+.login .social img {
+  margin: 5px;  
+}
+
+/*소셜로그인 위치조정*/
+.g-signin2, .n-signin, .k-signin {
+	display: inline-block;
+	float: left;
+	width:40px;
+	height:40px;
+}
+
+.g-signin2{
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+#kao{
+	cursor: pointer;
+}

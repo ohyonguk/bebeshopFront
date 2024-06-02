@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input:focus { outline: none; }
+body{
+    background-color: #badbf9;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.order input{
+	border:none;
+	font-size: 14px;
+}
+
+/* header .headerbx .search .fa:hover{
+    transform: rotateY(360deg);
+} */
+/* -----------------硫붿씤�쁺�뿭--------------------- */
+
+.main{
+    height: 200vh;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+ 
+    align-items: center;
+    flex-direction: column;
+
+}
+/* -----------------二쇰Ц�븯湲�--------------------- */
+
+.main .orderbx{
+    margin-bottom: 100px;
+    margin-top: 170px;
+}
+.main .orderbx .title{
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-weight: 100;
+    text-align: center;
+}
+.main .orderbx .name{
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.main .orderbx .order{
+    width: 900px;
+    border-top: 3px solid black;
+    border-collapse: collapse; 
+}
+.main .orderbx .order th{
+    border: 1px solid #E4E4E4;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 10px;
+}
+.main .orderbx .order td{
+    border: 1px solid #E4E4E4;
+    font-size: 14px;
+    padding: 15px;
+    
+}
+.main .orderbx .order td h2{
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 100;
+}
+.main .orderbx .order td h1{
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* -----------------諛곗넚�쁺�뿭--------------------- */
+
+.main .postbx{
+margin-bottom: 100px;
+
+}
+.main .postbx .name{
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 100;
+}
+.main .postbx .post{
+    width: 900px;
+    border-top: 3px solid black;
+    border-collapse: collapse; 
+}
+.main .postbx .post th{
+    font-size: 17px;
+    font-weight: 100;
+    padding: 10px;
+}
+.main .postbx .post td{
+    align-items: center;
+    padding: 7px;
+}
+.main .postbx .post td input{
+    width: 350px;
+    height: 30px;
+    font-size: 12px;
+}
+.main .postbx .post td input::placeholder{
+    padding-left: 10px;    
+}
+.main .postbx .post td a{
+    width: 100px;
+    height: 30px;
+    background-color: #707070;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-left: 15px;
+}
+.main .postbx .post tr td p{
+    font-size: 12px;
+    /* border: 1px solid black; */
+}
+/* -----------------寃곗젣�쁺�뿭--------------------- */
+.main .paybx{
+margin-bottom: 50px;
+}
+.main .paybx .pay{
+    width: 900px;
+    border-top: 3px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse; 
+}
+.main .paybx .pay td{
+    padding: 15px;
+}
+.main .paybx .pay td h1{
+    font-size: 25px;
+    font-weight: 100;
+}
+.main .paybx .pay td h2{
+    font-size: 15px;
+    font-weight: 100;
+}
+.hpay{
+	margin-left: 50%;
+}
+.main .hpay .cancel{
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    color: black;
+    font-weight: 100;
+}
+.main .hpay .npay{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-weight: 100;
+}
+.main .hpay .kpay{
+    width: 100px;
+    height: 40px;
+    background-color: 	#FEE500;
+    color: white;
+    font-weight: 100;
+}

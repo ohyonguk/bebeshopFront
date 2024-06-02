@@ -1,0 +1,17 @@
+spring:
+    profiles:
+        active: local
+
+server:
+    host:
+        api: http://localhost:8080
+        front: http://localhost:80
+    port: 80
+jwt:
+    issure: oksik68@naver.com
+    secretKey: secretKeyOywokokokokokofaunbvcasdfasf
+import:
+    code: imp53681815
+    api:
+        key: 7531372287768000
+        secretKey: v784G0MqvbATXP5OCOtrUyrtT8jZXqAtxJxeJkFfvf9s5fhH3K8YjAscILcGbN9JwHXg1DwxSF0YUhGY

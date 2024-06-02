@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* header .headerbx .search .fa:hover{
+    transform: rotateY(360deg);
+} */
+/* -----------------메인영역--------------------- */
+
+#h6tag{
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.main {
+  height: 2000px;
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+
+/* =========================은혜작업. 제품상세페이지 12~17장 ========================= */
+
+th,
+td {
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+.detail-img-big {
+  float: left;
+  background-color: #e4e4e4;
+  margin-left: 200px;
+  margin-top: 150px;
+  width: 510px;
+  height: 510px;
+}
+
+.detail-img-small {
+  position: absolute;
+  top: 680px;
+  width: 500px;
+  height: 80px;
+  margin-left: 395px;
+}
+
+.img1{
+	width: 120px;
+	height: 120px;
+/* 	object-fit:cover; */
+}
+#bigImg{
+	margin-top:5px;
+	width: 500px;
+	height: 500px;
+}
+
+.detail-order {
+  float: right;
+  width: 550px;
+  height: 400px;
+  margin-top: 200px;
+  margin-right: 200px;
+}
+
+#shopBtn {
+  border: none;
+  margin-left: 11%;
+  width: 300px;
+  height: 50px;
+  background-color: #d34f4f;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#orderBtn {
+  border: none;
+  margin-top: 10px;
+  margin-left: 11%;
+  width: 300px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+/*
+.reivew-request-tab {
+  float: left;
+  margin-top: 100px;
+  margin-left: 300px;
+  width: 800px;
+}
+*/
+
+#cont1 {
+  margin-top: -50px;
+}
+
+#cont2 {
+  margin-top: -50px;
+}
+
+.tabmenu input[type="radio"] {
+  display: none;
+  float: right;
+}
+
+.reivew-request-tab {
+  float: left;
+  margin-top: -1200px;
+  margin-left: 500px;
+  width: 800px;
+}
+
+
+
+.tabmenu label {
+  display: inline-block;
+  float: right;
+  border: black solid 1px;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 90px;
+}
+
+.tabmenu > div {
+  display: none;
+  position: absolute;
+  top: 982px;
+  left: 558px;
+  height: auto;
+  width: 800px;
+  padding: 20px;
+  background-color: white;
+  font-size: 20px;
+  color: black;
+}
+
+.customer-requests {
+  border: black solid 1px;
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 800px;
+  top: 1px;
+}
+
+/*tab1 선택시 탭영역이 바뀌기*/
+.tabmenu input[type="radio"]:checked + label {
+  background-color: white;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+/*tab1선택하면  cont1이 보여야함*/
+.tabmenu #tab1:checked ~ #cont1,
+.tabmenu #tab2:checked ~ #cont2 {
+  display: block;
+}
+
+#request-popup { /*작성시*/
+  display: none;
+  font-size: 13px;
+  border: 1px solid;
+  width: 600px;
+  background-color: white;
+  height: 600px;
+  position: absolute;
+  margin-left: 600px;
+  display: show;
+  top: 750px;
+}
+
+#request-popup-click {  /*답변시*/
+  font-size: 13px;
+  border: 1px solid;
+  width: 600px;
+  background-color: white;
+  height: 850px;
+  position: absolute;
+  margin-left: 600px;
+  top: 300px;
+}
+
+
+
+#request-popup-newclick{
+	
+ font-size: 13px;
+  border: 1px solid;
+  width: 300px;
+  background-color:#f7c10c;
+  height: 500px;
+  position: left;
+}
+
+
+.customer-reviews1,
+.customer-reviews2 {
+  margin-left: 100px;
+}
+
+#submitBtn, #show {
+  margin-top: 20px;
+  background-color: white;
+  width: 80px;
+  height: auto;
+  border: black solid 1px;
+}
+
+/*별점 찍기*/
+#star {
+  color: grey;
+}
+
+#selected {
+  color: #f7c10c;
+}
+
+#unselected {
+  color: grey;
+}
+
+i {
+  cursor: pointer;
+}
+
+#starimgsrc{
+    display: inline-block; margin-left: 95px; margin-top: 60px;
+}
+
+.starBars{
+    display: inline-block; margin-left: 380px;
+}
+
+.w3-light-grey{
+    height:24px;width:300px;margin-bottom: 5px;
+}
+
+#yellowstar{
+    color: #f7c10c  ;
+}
+
+#quantity{
+	width: 100px;
+}
+
+.w3-orange{
+	height: 24px; 
+	width: 0;
+}
+
+
+textarea {
+  resize: none;
+  width: 420px;
+}
+#rvContent{
+  width: 520px;
+	}
+
+#opt1, #opt2{
+	width: 250px;
+	height: 30px;
+}
+#quantity{
+		height: 30px;
+}
+
+
+/* =========================은혜 끝!!! 제품상세페이지 12~17장 ========================= */
+
+/*막대 그래프*/
+ .graph { 
+      position: relative;
+      width: 300px; 
+      border: 1px solid black; 
+      padding: 1px; 
+     margin-bottom:3px;
+  }
+  .graph .bar { 
+      display: block;
+      position: relative;
+      background: #f7c10c; 
+      height: 1.5em; 
+      line-height: 1.5em;            
+  }
+  .graph .bar span { position: absolute; left: 1em; }
+

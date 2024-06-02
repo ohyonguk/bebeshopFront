@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header class="header" th:fragment="header">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- 제이쿼리 -->
+        <script th:inline="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/header.css">
+        <!-- Boxicons CSS -->
+        <script th:inline="javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script th:inline="javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <!--js-->
+        <script th:inline="javascript" src="/js/search.js"></script>
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id"
+              content="1059402509993-5dgo9oqfau9tharl9cbb1qe4prp40h0j.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+        <title>title</title>
+    </head>
+
+    <div class="headerbx">
+        <a href="/index"><img src="/img/logo.png" alt="logo" width="100px" height="100px"></a>
+
+        <!--------------------- 상단 아이디 및 아이콘이 들어가는 공간 --------------------->
+        <div class="menubx">
+            <h6 class="shop"><a href="/product/1/1">SHOP</a></h6>
+           <!-- <c:choose>
+                <c:when test="${sessionUser.id eq 'admin'}">
+                    <input type="button" value="관리자" class="pos">
+                    <h6 class="headertag"><a href="/admin/admin_info">${sessionUser.id}</a></h6>
+                </c:when>
+                <c:when test="${empty sessionUser.id}">
+                    <input type="button" value="비로그인" class="pos">
+                </c:when>
+                <c:otherwise>
+                    <input type="button" value="회원" class="pos">
+                    <h6 class="headertag"><a href="/user/user_info">${sessionUser.id}</a></h6>
+                </c:otherwise>
+            </c:choose>-->
+
+            <h6 class="headertag"><a href="/board/admin_notice">게시판</a></h6>
+            <th:block th:if="${session.sessionUser!=null}">
+                <h6 class="headertag"><a href="#" onclick="signOut()">로그아웃</a></h6>
+                <a href="/user/cart" class="headertag"><img src="/img/cart.png" alt="cart" width="20px" height="20px"></a>
+                <input type="hidden" th:value="${session.sessionUser}" id="userId">
+            </th:block>
+            <th:block th:unless="${session.sessionUser!=null}">
+                <h6 class="headertag"><a href="/user/login">로그인</a></h6>
+                <a onclick="alert('로그인 후 이용해주세요.')" class="headertag"><img src="/img/cart.png" alt="cart" width="20px" height="20px"></a>
+            </th:block>
+
+        </div>
+    </div>
+
+
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            });
+            auth2.disconnect();
+            console.log('User signed out.');
+            $(document).ready(function(){
+                location.replace("/user/logout");
+            });
+        }
+
+        function onLoad() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init();
+            });
+        }
+
+    </script>
+
+</header>
+</html>

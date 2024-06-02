@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    a { text-decoration: none; color: black; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:focus { text-decoration: none; }
+    a:hover, a:active { text-decoration: none; }
+
+
+/* -----------------�뿤�뜑�쁺�뿭--------------------- */
+
+/* -----------------硫붿씤�쁺�뿭--------------------- */
+.main{
+	display:flex;
+	flex-direction:column;
+    height: 100%;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+/* -----------------硫붿씤�쁺�뿭(slide)--------------------- */
+/* .main .slide{
+    width: 80%;
+    top: 100px;
+    position: absolute;
+}
+.main .slide img{
+    object-fit: cover;
+    position: absolute;
+}
+.main .slide .fa{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    font-size: 40px;
+    color: black;
+    top: 170px;
+    left: 3%;
+}
+
+.main .slide .fa-arrow-right{
+    left: 95%;
+}
+.main .slide .radios{
+    position: absolute;
+    margin-left: 45%;
+    top: 320px;
+    font-size: 50px;
+}
+.main .slide .radios input[type="radio"]{
+     width: 18px;
+     height: 18px;
+ 
+} */
+/* -----------------硫붿씤�쁺�뿭(Time Sale)--------------------- */
+
+.main .Tsale{
+    position: relative;
+    top: 100px;
+}
+.main .Tsale .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.main .Tsale .Tbxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .Tsale .Tbxs .Tbx:hover{
+    box-shadow: 3px 3px 10px gray;
+    border: 1px solid #7070;
+}
+.main .Tsale .Tbxs .Tbx{
+    transition: 0.1s ease-in;
+}
+.main .Tsale .Tbxs .Tbx img{
+    width: 250px;
+    height: 300px;
+    background-image: url(a.jpg);
+    margin: 20px;
+    box-shadow: 5px 5px 3px #0909094a;
+}
+
+.main .Tsale .Tbxs .Tbx a{
+    text-decoration: none;
+    color: black;
+}
+.main .Tsale .Tbxs .Tbx a h1{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .Tsale .Tbxs .Tbx a .price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+.main .Tsale .Tbxs .Tbx a .price h6{
+    font-size: 12px;
+    margin-right: 5px;
+    text-decoration:line-through
+}
+.main .Tsale .Tbxs .Tbx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.main .Tsale .Tbxs .Tbx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.main .Tsale .Tbxs .Tbx span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----------------硫붿씤�쁺�뿭(�씤湲곗긽�뭹)--------------------- */
+
+.main .Fsale{
+	display:flex;
+    position: relative;
+    flex-direction: column;
+}
+.main .Fsale .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.main .Fsale .Fbxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.main .Fsale .Fbxs .Fbx{
+    transition: 0.1s ease-in;
+}
+.main .Fsale .Fbxs .Fbx:hover{
+    transform: translatey(-20px);
+}
+.main .Fsale .Fbxs .Fbx img{
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 5px 5px 3px #0909094a;  
+}
+.main .Fsale .Fbxs .Fbx a{
+    text-decoration: none;
+    color: black;
+}
+.main .Fsale .Fbxs .Fbx a h1{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .Fsale .Fbxs .Fbx a .price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+.main .Fsale .Fbxs .Fbx a .price h6{
+    font-size: 12px;
+    margin-right: 5px;
+    text-decoration:line-through
+}
+.main .Fsale .Fbxs .Fbx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.main .Fsale .Fbxs .Fbx a .price h4{
+    font-size: 12px;
+    margin-left: 5px;
+}
+/* -----------------硫붿씤�쁺�뿭(踰좎뒪�듃 由щ럭)--------------------- */ 
+.main .review{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 500px
+}
+.main .review .rvname{    
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.rvname .namebox{
+	display:flex;
+	width: 200px;
+	height: 80px;
+    border: 5px solid black;
+    border-style: double;
+    align-items: center;
+    justify-content: center;
+}
+.main .review .rvboxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .review .rvboxs  .rvbox{
+    font-size: 13px;
+    margin-top: 45px;
+    border: 1px solid black;
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.main .review .rvboxs  .rvbox.right{
+   margin : 2% 5% 2% 5%;
+}
+
+.main .review .rvboxs  .rvbox span{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 5px;
+    color: coral;
+}
+.main .review .rvboxs  .rvbox span h3{
+    color: black;
+}
+
+.slide{
+    height: 400px;
+    transition:  transform 0.5s;
+    overflow:hidden;
+    position:relative;
+}
+
+.slideImg{
+	height:400px;
+	width: 100%;
+
+}
+
+    .slide li{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0;transition:1s;
+    	cursor:pointer;}
+    .slide input{display:none;}
+    .slide .bullet{position:absolute;bottom:20px;left:0;right:0;text-align:center;z-index:10;}
+    .slide .bullet label{width:10px;height:10px;border-radius:10px;border:2px solid #666;display:inline-block;background:#fff;font-size:0;transition:0.5s;cursor:pointer;}
+
+
+    #pos1~ ul li:nth-child(1),
+    #pos2 ~ ul li:nth-child(2),
+    #pos3~ ul li:nth-child(3){display:none;}
+    /* 슬라이드 조작 */
+    #pos1:checked ~ ul li:nth-child(1),
+    #pos2:checked ~ ul li:nth-child(2),
+    #pos3:checked ~ ul li:nth-child(3){opacity:1; display:block; }
+ 
+    /* bullet 조작 */
+    #pos1:checked ~ .bullet label:nth-child(1),
+    #pos2:checked ~ .bullet label:nth-child(2),
+    #pos3:checked ~ .bullet label:nth-child(3){background:#666;}
+ 
+
+
+
+.slideName{
+	display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#revimg img{
+	border-radius: 70% ;
+	overflow: hidden;
+	 box-shadow: 2px 2px 5px gray;
+}
+
+#revcontent{
+padding-left: 	5px;
+ font-size: 15px; 
+ color: black;
+ width: 360px;
+ text-align: left;
+}
+
+.rvbox{
+    transition: 0.1s ease-in;
+}
+.rvbox:hover{
+    transform: translatey(-20px);
+}
+

@@ -1,0 +1,86 @@
+*{
+	font-family: 'Gowun Dodum', sans-serif;
+	font-size: 99%;
+}
+
+
+body{
+    background-color: #badbf9;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* -----------------�뿤�뜑�쁺�뿭--------------------- */
+  /* �닾紐낇븯寃� �븯�뒗嫄� 異붽� �븘�슂 */
+  header{
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #707070;
+    box-shadow: 3px 3px 3px #0909094a;
+    z-index: 1000;
+  }
+  header .headerbx{
+    width: 80%;
+    margin: 0 auto;
+  }
+  header .headerbx .menubx{
+    display: flex;
+    float: right;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  header .headerbx .menubx .shop a{
+    font-size: 22px;
+    text-decoration: none;
+    margin-right: 10px;
+
+  }
+  header .headerbx .menubx input{
+    border-radius: 20px 20px;
+    background-color: #badbf9;
+    width: 70px;
+    height: 25px;
+    font-size: 15px;
+    margin-right: 10px;   
+    font-weight: bold;
+  }
+  header .headerbx .menubx h6 a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  header .headerbx .menubx img{
+    margin: 10px;
+    cursor: pointer;
+  }
+  header .headerbx .search{
+    display: none;
+  }
+  header .headerbx .search.active{
+    display: flex;
+    box-shadow: 3px 3px 5px black;
+    position: absolute;
+    left: 73vw;
+    top: 80px;
+  }
+  header .headerbx .search input{
+    width: 200px;
+    height: 30px;
+  }
+  header .headerbx .search .fa{
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 6px;
+    cursor: pointer;
+  }
+  
+.headertag{
+  margin-left: 10px;
+  }

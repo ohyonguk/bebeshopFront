@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script th:inline="javascript" src="/js/cart.js"></script>
+    <link rel="stylesheet" href="/css/user/cart.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+<div class="background">
+    <!-- 메뉴바 -->
+    <div th:id="header" th:replace="~{fragments/header :: header}"></div>
+    <div class="main">
+        <div class="aside">
+            <div th:id="userAside" th:replace="~{fragments/user_aside :: userAside}"></div>
+        </div>
+
+        <div class="mainbox">
+            <div class="orderbx">
+                <h4 class="name3">장바구니</h4>
+                <table class="order">
+
+                    <tr>
+                        <th colspan="2" style="border-left: hidden; width:1000px">제품정보</th>
+                        <th style="width: 50px;">수량</th>
+                        <th style="width: 250px;">결제금액</th>
+                        <th style="width: 150px; border-right: hidden;">제품선택<input
+                                id="allCheck" type="checkbox" name="allCheck" /></th>
+                    </tr>
+                    <th:block th:each="item : ${cartList}">
+                        <tr>
+                            <td style="border-left: hidden" align=right>
+                                <img src="${item.productImg1 }" alt="a" width="120px" height="120px">
+                            </td>
+                            <td style="border-left: hidden" align="left">
+                                <a th:href="@{/product/detail/{productNo}(productNo = ${item.productNo})}">
+                                <h3>제품명 : <input type="text"  name="productName" th:value="${item.productName}" readonly/></h3>
+                                <h3>가격: [(${item.productPrice})]원</h3>
+                            </a>
+                            </td>
+                            <td align=center>
+                                <input type="text" id="quantity" th:value="${item.count} "  style="text-align: center;" readonly/>
+                            </td>
+
+                            <td align=center>
+                                <h1>[(${item.count*item.productPrice})]원</h1>
+                            </td>
+                            <td align=center style="border-right: hidden">
+                                <input class="RowCheck" 	type="checkbox" name="RowCheck" th:value="${item.productNo}">
+                                <input class="checked" type="hidden"  name="checked" value="false"/>
+                                <input type="hidden"  name="productNo" th:value="${item.productNo}"/>
+                            </td>
+                        </tr>
+                    </th:block>
+
+                    </table>
+
+                    <div class= "formbtn">
+                        <input id="deleteBtn"  type="button"  class="delete" value="삭제하기" onclick= "selDelete()" />
+                        <input id="purchaseBtn" type="button" class ="order" value="선택상품 결제" onclick="checkStock()"/>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+
+
+
+</html>

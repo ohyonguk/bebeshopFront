@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/product/detail.css">
+    <script th:inline="javascript" src="/js/cart.js"></script>
+    <title>Document</title>
+    <!--링크들-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!-- w3school css적용시 헤더부분 꺠짐 수정필요 -->
+</head>
+
+<body>
+<div class="background">
+    <div th:id="header" th:replace="~{fragments/header :: header}"></div>
+    <!--제품상세페이지-->
+    <div class="main">
+        <form name="order">
+            <input type="hidden" th:value="${detMain.productNo}" id="productNo">
+
+            <div class="detail-img-big">
+                <div style="text-align: center;">
+                    <input type="hidden" name="productImg1" th:value="${detMain.productImg1}" />
+                    <img th:src="${detMain.productImg1}" id="bigImg" alt=""/>
+                </div>
+            </div>
+            <div class="detail-order">
+                <br>
+                <div style="float: left; margin-left: 100px; font-size: 20px;">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 th:text="${detMain.productName}"></h3></td>
+                        </tr>
+                        <tr>
+                            <td>판매가</td>
+                            <td><input name="productPrice" th:value="${detMain.productPrice}" readonly style="border-style: none; width: 100px; text-align: right;" />원
+                            </td>
+                        </tr>
+                    </table>
+                    <hr color="grey" size="1px" style="margin-top: 10px;">
+                    <br>
+                    <table style="padding: 10px; font-size: 15px;">
+                        <tr>
+                            <td>수량</td>
+                            <td>
+                                <input type="number" id="quantity" name="quantity" min="1" th:max="${detMain.productCnt}" value="1" />
+                            </td>
+                        </tr>
+                    </table>
+                    <hr color="grey" size="1px" style="margin-top: 30px;">
+                    <br>
+                    <input type="button" id="shopBtn" value="장바구니" onclick="addCart()" /><br>
+                    <input type="button" id="orderBtn" value="구매하기" onclick="orderNow()" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="detail-img-small">
+        <div class="smallimg">
+            <img th:src="${detMain.productImg1}" class="img1" alt="준비중입니다." />
+            <img th:src="${detMain.productImg2}" class="img1" alt="준비중입니다." />
+            <img th:src="${detMain.productImg3}" class="img1" alt="준비중입니다." />
+        </div>
+    </div>
+
+    <!--<div class="reivew-request-tab">
+        <div class="tabmenu">
+            <input type="radio" name="tab" id="tab1" checked />
+            <label for="tab1" style="font-size: 15px; text-align: center;">리뷰</label>
+
+            <div id="cont1" style="border: 1px solid black;">
+                <br> <br>
+                <h3 style="text-align: center;">${detMain.productName}</h3>
+                <br> <br>
+                <div id="star" style="position: absolute; left: 10px; top: 185px;">
+                    <div class="average">
+                        &nbsp;
+                        <span style="font-size: 50px; font-weight: bold; color: black; position: absolute; left: 145px;"></span>
+                    </div>
+                    <div id="starimgsrc">
+                        <img src="/img/staron.png" alt="" width="30px">
+                        <img src="/img/staron.png" alt="" width="30px">
+                        <img src="/img/staron.png" alt="" width="30px">
+                        <img src="/img/staron.png" alt="" width="30px">
+                        <img src="/img/staron.png" alt="" width="30px">
+                    </div>
+                    <br> <br>
+                </div>
+
+                <div class="starBars">
+                    <div class="graph">
+                        <strong class="bar" id="1star" style="width: 0%;"> <span>1</span>
+                        </strong>
+                    </div>
+
+                    <div class="graph">
+                        <strong class="bar" id="2star" style="width: 0%;"> <span>2</span>
+                        </strong>
+                    </div>
+
+                    <div class="graph">
+                        <strong class="bar" id="3star" style="width: 0%;"> <span>3</span>
+                        </strong>
+                    </div>
+                    <div class="graph">
+                        <strong class="bar" id="4star" style="width: 0%;"> <span>4</span>
+                        </strong>
+                    </div>
+                    <div class="graph">
+                        <strong class="bar" id="5star" style="width: 0%;"> <span>5</span>
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="scrollTest" style="overflow: auto; height: 500px;">
+
+                    &lt;!&ndash;<form action="/productdetail/reviewManage" method="get">
+                        <input type="hidden" id="productNo" name="productNo"
+                               value="<%=productNo%>" />
+                        <div class="customer-reviews" style="font-size: 12px;">
+                            <div class="customer-reviews1">
+                                <br> <br> <br> <input type="submit"
+                                                      value="베스트리뷰 관리" id="submitBtn" name="bestRvManage"
+                                                      style="width: auto;" />
+                                <c:forEach var="r" items="${rvOne}">
+                                    <b>${r.id}</b>/
+                                    <c:forEach var="s" begin="1"
+                                               end="${r.rvStar}">
+                                        <i class="fa fa-star" id="selected"></i>
+                                    </c:forEach> /
+                                    <fmt:formatDate
+                                            value="${r.rvDate}" pattern="yy-MM-dd" /> /
+                                    <table
+                                            style="width: 520px; min-height: 70px; border: 1px solid black; margin-top: 10px; margin-bottom: 40px;">
+                                        <tr>
+                                            <td colspan="3">${r.rvContent}</td>
+                                        </tr>
+                                    </table>
+                                </c:forEach>
+                                <details style="font-size: 12px;">
+                                    <summary
+                                            style="float: left; margin-left: 540px; margin-top: -150px; cursor: pointer;">
+                                        더보기 </summary>
+                                    <c:forEach var="r" items="${rvAll}">
+                                        <b>${r.id}</b> /
+                                        <c:forEach var="s" begin="1"
+                                                   end="${r.rvStar}">
+                                            <i class="fa fa-star" id="selected"></i>
+                                        </c:forEach> /
+                                        <fmt:formatDate
+                                                value="${r.rvDate}" pattern="yy-MM-dd" /> /
+                                        <table
+                                                style="width: 550px; min-height: 100px; border: 1px solid black; margin-top: 10px;">
+                                            <tr>
+                                                <td colspan="3">${r.rvContent}</td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                    </c:forEach>
+                                </details>
+                            </div>
+                        </div>
+                    </form>&ndash;&gt;
+
+                    <form name="userReviewWrite">
+
+                        <hr color="grey" size="2px"
+                            style="margin-top: 20px; margin-bottom: 20px;">
+                        <div class="user-reivew">
+                            리뷰쓰기<br>
+                            <div class="customer-reviews2"
+                                 style="font-size: 12px; margin-top: 20px;">
+                                <span id="id_" name="id_"><b> ${sessionUser.id}</b></span>/ <i
+                                    class="fa fa-star star-1" id="star"></i> <i
+                                    class="fa fa-star star-2" id="star"></i> <i
+                                    class="fa fa-star star-3" id="star"></i> <i
+                                    class="fa fa-star star-4" id="star"></i> <i
+                                    class="fa fa-star star-5" id="star"></i> <sub
+                                    class="autoRating" id="star_"> <span>0</span>
+                            </sub> / <input type="hidden" id="id" name="id" value="${sessionUser.id}" />
+                                <input type="hidden" id="productNo" name="productNo" value="<%=productNo%>" />
+                                <input type="hidden" id="rvStar" name="rvStar" />
+                                <sub class="rvDate"><span></span></sub> <br>
+                                <textarea name="rvContent" id="rvContent" cols="72" rows="8" maxlength="300" style="margin-top: 10px;" required/>
+                                <br>
+                                <input type="button" id="submitBtn" value="등록" onclick="subReview()" style="float: right; cursor: pointer;" />
+                                <br> <br>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+
+
+<script>
+
+    // console.log("detMA:  "+"${detMain}");
+    //
+    // if("${detMain}"==""){
+    //     alert("현재 판매중인 상품이 아닙니다.");
+    //     //histroy.go(-1);
+    //     history.back();
+    // }
+    //
+    //
+    // //현재 아이디 체크
+    // var curUser = "${sessionUser.id}";
+    //
+    // //필요한 변수 선언
+    // var num;
+    // var userid;   //question(문의)의 유저아이디
+    // var rvUserid; //review의 유저아이디
+    // var secret;
+    // var productNo = $("#productNo").val();
+    // var checked;
+
+
+    function subReview(){
+        if($("#rvContent").val() == ""){
+            alert("리뷰 내용을 입력하세요.");
+            return;
+        }
+
+        if ($('#rvStar').val() == 0){
+            alert("최소 별점은 1점입니다.");
+            return;
+        }
+
+        if(curUser!=""){
+            var con = confirm("게시물을 등록할까요? ");
+            if(con){
+                if(${pUser}>0){
+                    var frm = document.userReviewWrite;
+
+                    frm.action = "/productdetail/reveiw.do";
+                    frm.method = "post";
+                    frm.submit();
+                }else{
+                    alert("배송완료된 회원만 리뷰를 등록할 수 있습니다.");
+                }
+            }
+        }else{
+            alert("구매한 회원만 리뷰를 등록할 수 있습니다.");
+        }
+
+        if ($('#rvStar').val() == 0){
+            alert("최소 별점은 1점입니다.");
+            return;
+        }
+    }
+
+    //date형식지정
+    var today = new Date();
+    var year = today.getFullYear();
+    var month = ('0' + (today.getMonth() + 1)).slice(-2);
+    var day = ('0' + today.getDate()).slice(-2);
+    var dateString = year + month + day;
+    $(".rvDate > span").html(dateString);
+
+    //starbars width처리
+    $(document).ready(function () {
+        var total = 0;
+        var cntstar = "";
+        <c:forEach var="star" items="${rvStar}">
+            var tmp = ${star.cnt};
+            total += tmp;
+        </c:forEach>
+        <c:forEach var="star" items="${rvStar}">
+            var i = ${star.rvStar};
+            var a = (${star.cnt}/total)*100;
+            $("#"+i+"star").css('width', a+"%");
+        </c:forEach>
+    });
+
+
+        //재고값받아오기
+    $('#opt2').on('change', function () {
+        var selectedSize = $('#opt2').val();
+        $.ajax({
+            url: "/productdetail/options.stock",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            dataType: "json",
+            data: "/productNo=" + productNo,
+            success: function (data) {
+                $('#tmpMax').val(data.stock);
+                $('#quantity').prop('max', $('#tmpMax').val());
+            },
+            error: function (request, status, error) {
+                alert("code = " + request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
+            }
+        })
+    })
+
+
+    //checkbox 하나만
+    $(document).ready(function () {
+        $('input[type="checkbox"][id="secret-public"]').click(function () {
+            if ($(this).prop('checked')) {
+                $('input[type="checkbox"][id="secret-public"]').prop('checked', false);
+                $(this).prop('checked', true);
+            }
+        });
+    });
+
+    // 작은 이미지클릭시 큰이미지에 넣기
+    $(".img1").click(function () {
+        $('#bigImg').attr("src", $(this).attr("src"));
+    });
+
+    //구매하기
+    function orderNow() {
+        if(curUser == ""){
+            alert("회원가입 후 구매가 가능합니다.");
+        }else{
+            var max = parseInt($('#tmpMax').val());
+            var qty = parseInt($('#quantity').val());
+            if (qty > 0) {
+                if (max >= qty) {
+                    var frm = document.order;
+                    frm.action = "/productdetail/order";
+                    frm.method = "get";
+                    frm.submit();
+                } else {
+                    alert("최대 구매수량은 " + max + "개 입니다.");
+                }
+            }
+        }
+
+    }
+
+    /*별점찍기*/
+    function changeStarColor(ratingArg) {
+        let rating = ratingArg;
+        for (let i = 1; i <= rating; i++) {
+            $(".star-" + i).attr("id", "selected");
+        }
+        for (let i = rating + 1; i <= 5; i++) {
+            $(".star-" + i).attr("id", "unselected");
+        }
+        $(".autoRating > span").html(rating);
+    }
+    let selectedRating = 0;
+
+    $("i").hover(function () {
+        let starClass = parseInt($(this).attr("class").split("star-")[1]);
+        changeStarColor(starClass);
+    }, function () {
+        if (selectedRating == 0) {
+            changeStarColor(0);
+            $(".autoRating > span").html("0");
+        } else {
+            changeStarColor(selectedRating);
+        }
+    });
+
+    $("i").click(function () {
+        let starClass = parseInt($(this).attr("class").split("star-")[1]);
+        changeStarColor(starClass);
+        selectedRating = starClass;
+
+        var abc = $("#star_").text();
+        $('#rvStar').val(abc);
+    });
+
+</script>
+
+<script type="text/javascript" src="/js/search.js"></script>
+<div th:class="footer" th:include="~{fragments/footer :: footer}" ></div>
+</body>
+
+</html>

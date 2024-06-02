@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 50px;
+}
+
+.track_detail h1 {
+  border-bottom: 1px solid #707070;
+  width: 600px;
+}
+
+.track_detail{
+	display: flex;
+}
+
+.track_detail>div{
+height: 100px;
+width: 100px;
+}
+
+#infotable{
+	border-collapse: collapse;
+}
+/* #infotable td{
+  border: 1px solid #707070;
+} */
+
+#closebtn {
+  margin-top:20px;
+  width: 60px;
+  height: 30px;
+  background-color: #badbf9;
+  color: white;
+  font-weight: bold;
+  border: 1px #badbf9;
+}
+#closebtn:hover {
+  color: #badbf9;
+  background-color: white;
+}

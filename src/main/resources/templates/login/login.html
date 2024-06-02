@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Jua&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script th:inline="javascript" src="/js/login.js"></script>
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+          content="1059402509993-5dgo9oqfau9tharl9cbb1qe4prp40h0j.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>bebeshop</title>
+</head>
+<body>
+<div th:id="header" th:replace="~{fragments/header :: header}"></div>
+<div class="outbx">
+    <div class="inbx">
+        <h1>WELCOME</h1>
+            <div class="login">
+                <h1>로그인</h1>
+                <input name ="id" type="id" class="id" value="" placeholder="아이디" >
+                <input name="passwd" type="password" class="passwd" placeholder="비밀번호">
+                <!-- 한줄로 내리기 위해 div 처리 -->
+                <div class="checkbx"><input type="checkbox" class="check" name="saveId" >&nbsp<label>아이디 저장</label></div>
+                <input type="submit" value="로그인" class="btn" onclick="login()">
+                <div class="found"><h6><a href="/login/findid">아이디 찾기</a>
+                </h6>&nbsp|&nbsp<h6><a href="/login/findpasswd">비밀번호 찾기</a></h6>&nbsp|&nbsp
+                    <h6><a href="/login/constent">회원가입</a></h6>
+                </div>
+            </div>
+        <div class="social">
+            <div class="k-signin">
+                <img src="/img/kakao.png" width=25; id="kao" onclick="kakaoLogin()"/>
+            </div>
+            <div class="g-signin2" data-onsuccess="onSignIn"
+                 data-width="25" data-height="25" data-longtitle="false">
+            </div>
+            <div class="n-signin" id="naver_id_login">
+                <img src="/img/naver.png" width=25; id="na" onclick="naverLogin()"/>
+            </div>
+            <input type="hidden" id="id" name="id" value=""/>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+
+</script>
+</body>
+
+
+</html>
