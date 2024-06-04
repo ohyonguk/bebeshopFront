@@ -17,7 +17,7 @@ public class OrderService {
         CartRequestDto cartRequestDto = new CartRequestDto();
         cartRequestDto.setCartNoList(cartNoList);
         cartRequestDto.setId("xxx");
-        return cartService.findCart(cartRequestDto);
+        return cartService.findOrderListCart(cartRequestDto);
     }
 
 

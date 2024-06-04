@@ -19,12 +19,16 @@ public class CartService {
         ResponseEntity<List> res =  cartRestService.findCart(cartRequestDto);
         return res.getBody();
     }
+    public List findOrderListCart(CartRequestDto cartRequestDto){
+        ResponseEntity<List> res =  cartRestService.findOrderListCart(cartRequestDto);
+        return res.getBody();
+    }
 
     public void deleteCartList(CartRequestDto cartRequestDto) {
         cartRestService.deleteCartList(cartRequestDto);
     }
 
-    public void insetCart(CartRequestDto cartRequestDto) throws Exception {
+    public Long insetCart(CartRequestDto cartRequestDto) throws Exception {
         ProductRequestDto productRequestDto = new ProductRequestDto();
         productRequestDto.setProductNo(cartRequestDto.getProductNo());
         int cnt = productService.productCnt(productRequestDto);
@@ -33,7 +37,7 @@ public class CartService {
             throw new Exception("최대 수량을 초과하여 담을 수 없습니다.");
         }
 
-        cartRestService.insertCart(cartRequestDto);
+        return cartRestService.insertCart(cartRequestDto);
 
     }
 }

@@ -44,7 +44,21 @@ public class CartController {
         }catch (Exception e){
             throw new Exception(e.getMessage());
         }
+    }
 
+    @PostMapping("/user/cart/addCartAndOrder")
+    @ResponseBody
+    public Long addCartAndOrder(@RequestBody CartRequestDto cartRequestDto, HttpServletRequest req,
+                           HttpSession httpSession) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        cartRequestDto.setId(httpSession.getAttribute("sessionUser").toString());
+        Long cartNo =0L;
+        try{
+            cartNo = cartService.insetCart(cartRequestDto);
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+        return cartNo;
     }
     @PostMapping("/user/cart/deleteList")
     @ResponseBody

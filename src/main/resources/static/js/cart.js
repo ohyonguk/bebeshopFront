@@ -45,6 +45,32 @@ function addCart() {
 		})
 	}
 }
+function addCartAndOrder() {
+	if($("#userId").val()===undefined){
+		alert("로그인 후 가능합니다.");
+	}else{
+		var param = {
+			productNo : $("#productNo").val(),
+			count : $("#quantity").val(),
+			btn: "order"
+		}
+
+		$.ajax({
+			url: '/user/cart/addCartAndOrder',
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify(param),
+			success: function (data) {
+				location.href = "/order/goOrder/" +data
+			},
+			error: function (request, status, error) {
+				alert("code = " + request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
+			}
+		})
+	}
+}
+
+
 var qty = parseInt($('#quantity').val());
 console.log(qty);
 function selDelete(){
