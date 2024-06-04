@@ -20,8 +20,14 @@ public class CartRestService {
         ResponseEntity<List> res = rt.postForEntity(route+"/findCart",cartRequestDto, List.class);
         log.info("{}", res);
         return res;
-
     }
+    public ResponseEntity<List> findOrderListCart(CartRequestDto cartRequestDto){
+        RestTemplate rt = new RestTemplate();
+        ResponseEntity<List> res = rt.postForEntity(route+"/findOrderListCart",cartRequestDto, List.class);
+        log.info("{}", res);
+        return res;
+    }
+
 
     public void deleteCartList(CartRequestDto cartRequestDto) {
         RestTemplate rt = new RestTemplate();
@@ -29,9 +35,9 @@ public class CartRestService {
 
     }
 
-    public void insertCart(CartRequestDto cartRequestDto) {
+    public Long insertCart(CartRequestDto cartRequestDto) {
         RestTemplate rt = new RestTemplate();
-        rt.postForEntity(route+"/save",cartRequestDto, void.class);
-
+        ResponseEntity<Long> res = rt.postForEntity(route+"/save",cartRequestDto, Long.class);
+        return res.getBody();
     }
 }

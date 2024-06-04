@@ -16,5 +16,6 @@ public class CartRequestDto {
     private List<Long> productNoList;
     private List<ProductV2> productList;
     private List<Long> cartNoList;
+    private String btn;
 
 }

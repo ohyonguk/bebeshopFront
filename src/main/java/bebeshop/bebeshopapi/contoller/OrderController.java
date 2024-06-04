@@ -28,9 +28,8 @@ public class OrderController {
         }
 
     }
-    @GetMapping("/order/goOrder/{cartList}")
+    @GetMapping("/order/goOrder/{cartNoList}")
     public String order(@ModelAttribute CartRequestDto cartRequestDto,
-                        //RequestParam(value = "cartList", required = true) List<Long> cartNoList ,
                         HttpServletRequest req, HttpSession session){
         List orderInfoList = orderService.getOrderInfo(cartRequestDto.getCartNoList());
 
