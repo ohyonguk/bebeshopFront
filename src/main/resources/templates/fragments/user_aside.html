@@ -35,6 +35,39 @@
         </div>
     </div>
 </div>
+<div class="half" th:fragment="adminAside">
+    <link rel="stylesheet" href="/css/aside.css">
+    <div class="name">
+        <h4>마이페이지</h4> <br>
+        <p>관리자님 안녕하세요!</p>
+    </div>
+    <div class="point">
+        <img src="/img/man.png" alt="사람이미지"><br>
+    </div>
+    <div class="menulist">
+        <div></div>
+        <div class="menu">
+            <a href="/admin/product_add"><img src="/img/menu.png" alt="메뉴사진">
+                <p>상품추가</p>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="/admin/product_mng"><img src="/img/menu.png" alt="메뉴사진">
+                <p>재고 관리</p>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="/admin/user_mng"><img src="/img/menu.png" alt="메뉴사진">
+                <p>회원 관리</p>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="/admin/order_mng"><img src="/img/menu.png" alt="메뉴사진">
+                <p>주문 현황</p>
+            </a>
+        </div>
+    </div>
+</div>
 
 <script>
     $('.menu').click(function() {
