@@ -65,8 +65,7 @@
                             <div class="productno" >[[${item.productNo}]]</div>
                         </td>
                         <td >
-                            <img style="width:80px; height: 80px;" alt="제품사진" th:src="${item.productImg1}">
-                            [[${item.productImg1}]]
+                            <img style="width:80px; height: 80px;" alt="제품사진" th:src="@{${item.productImg1}}">
                         </td>
                         <td>
                             <a href="/productdetail?productNo=${list.productNo}">

@@ -1,7 +1,10 @@
 spring:
     profiles:
         active: local
-
+    servlet:
+        file:
+            upload:
+                path: C:\Project_bebe\bebe_front\src\main\resources\static\img
 server:
     host:
         api: http://localhost:8080

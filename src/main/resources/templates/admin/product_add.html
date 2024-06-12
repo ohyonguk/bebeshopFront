@@ -62,9 +62,11 @@
                     </div>
                     <div id="imgbox">
                         <h3>제품이미지</h3><br>
-                        첫번째 이미지<input type="file" accept="image/* " class="imgfile" id="file1" name="file"	/>
-                        두번째 이미지<input type="file" accept="image/*"  class="imgfile" id="file2" 	name="file" /><br>
-                        세번째 이미지<input type="file" accept="image/*"  class="imgfile" id="file3"	name="file"/>
+                        <form method="post" th:id="formData" enctype="multipart/form-data">
+                        첫번째 이미지<input type="file" accept="image/* " class="imgfile" id="file1" name="file" multiple	/>
+                        두번째 이미지<input type="file" accept="image/*"  class="imgfile" id="file2" 	name="file" multiple/><br>
+                        세번째 이미지<input type="file" accept="image/*"  class="imgfile" id="file3"	name="file" multiple/>
+                        </form>
                         <div class="imgsubbox">
                             <div id="img1"><img src="" /></div>
                             <div id="img2"><img src="" /></div><br>

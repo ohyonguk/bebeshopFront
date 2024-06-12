@@ -107,19 +107,19 @@ function addProduct() {
         productCnt : $("[name=productStock]").val(),
         productPrice : $("[name=productPrice]").val(),
     }
-    var img = new Array();
-    img.push($("#file1").val());
-    img.push($("#file2").val());
-    img.push($("#file3").val())
-    formData.append("img",img);
-    formData.append("json",new Blob([JSON.stringify(param)],{type:"application/json}"}));
+    var inputFile = $("input[name='file']");
+    var files = inputFile[0].files;
+    for(var i=0; i<files.length;i++){
+        formData.append("img",files[i]);
+    }
+    formData.append("jsonxx",new Blob([JSON.stringify(param)],{type:"application/json"}));
     console.log(param);
     $.ajax({
         url: '/admin/addProduct',
         type: 'POST',
-        // contentType: 'multipart/form-data',
-        enctype: "multipart/form-data",
         data: formData,
+        contentType: false,
+        processData: false,
         success: function (data) {
             alert("장바구니에 상품이 담겼습니다.");
         },
