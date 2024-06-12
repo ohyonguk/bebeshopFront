@@ -35,4 +35,7 @@ public class ProductService {
     }
 
 
+    public void addProduct(ProductRequestDto productRequestDto) {
+        productRestService.addProduct(productRequestDto);
+    }
 }

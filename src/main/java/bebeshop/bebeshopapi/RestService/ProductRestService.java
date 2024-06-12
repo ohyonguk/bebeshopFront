@@ -36,4 +36,9 @@ public class ProductRestService {
         ResponseEntity<Boolean> res = rt.postForEntity(route+"/productCntList",cartRequestDto, Boolean.class);
         return res.getBody();
     }
+
+    public void addProduct(ProductRequestDto productRequestDto) {
+        RestTemplate rt = new RestTemplate();
+        ResponseEntity<String> res = rt.postForEntity(route+"/addOne",productRequestDto, String.class);
+    }
 }

@@ -26,7 +26,7 @@
                 <h4>재고 관리</h4>
                 <hr style="border: solid black 2px;">
             </div>
-           <!-- <form action="searchproduct" method="post" name="formcategory">
+           <form action="searchproduct" method="post" name="formcategory">
                 <div class="log">
                     <select id="mainCategory" name="mainCategory"
                             onchange="itemChange()" required>
@@ -40,7 +40,7 @@
                 </select>
                     <input id="searchWord" name="searchWord" style="width:250px;height:30px;font-size:16px;"> &nbsp
                     <input class="button" id="search" type="submit" value="검색">
-            </form>-->
+            </form>
             <input id="delbtn" class="button" value="삭제" type="button" readonly>
         </div>
         <div class="log_table"  th:id="productlist" >
@@ -52,16 +52,43 @@
                     <th >이미지</th>
                     <th >상품명</th>
                     <th>금액</th>
-                    <th >색상 / 사이즈 : 재고</th>
-                    <th>판매량</th>
-                    <th>옵션추가</th>
+                    <th >재고</th>
                 </tr>
+                <th:block th:each="item:${productlist}">
+                    <tr>
+                        <td>
+                            <div class="productcheck">
+                                <input type="checkbox" th:value="${item.productNo}" name="checkproductno">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="productno" >[[${item.productNo}]]</div>
+                        </td>
+                        <td >
+                            <img style="width:80px; height: 80px;" alt="제품사진" th:src="${item.productImg1}">
+                            [[${item.productImg1}]]
+                        </td>
+                        <td>
+                            <a href="/productdetail?productNo=${list.productNo}">
+                                <div class="productname">[[${item.productName}]]</div>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="price">[[${item.productPrice}]]</div>
+                        </td>
+                        <td id="option" >
+                            <div>[[${item.productCnt}]]</div>
+                        </td>
+                    </tr>
+                </th:block>
             </table>
         </div>
         <div id="productmain" style="overflow:auto; height: 590px; width: 1170px;">
 
             <div class="log_table"  th:id="productlist" >
                 <table id="manager">
+
+
                     <!--<input type="hidden" value="${map.psVo.searchWord}" id="searchWordval"/>
 
                     <c:forEach var="list" items="${map.productlist}" varStatus="st">
@@ -114,19 +141,6 @@
                         <c:if test="${st.last}"></form></c:if>
                     </c:forEach>-->
                 </table>
-            </div>
-            <div class="log_table"  id="opdiv">
-               <!-- <table id="optable">
-                    <c:forEach var="list" items="${map.productlist}" varStatus="st">
-                        <tr>
-                            <td>
-                                <div >
-                                    <button class="button" onclick="popup(${st.index})">옵션 추가</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </table>-->
             </div>
             </table>
         </div>

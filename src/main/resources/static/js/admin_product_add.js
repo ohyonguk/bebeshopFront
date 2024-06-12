@@ -72,22 +72,62 @@ function itemChange(){
 	  var option = $("<option value=''>분류 선택</option>");
  	 $('#subcategory').append(option);
  		for(var count = 0; count < 2; count++){  
- 		 	var option = $("<option value='"+selectItem+"0"+(count+1)+"'>"+changeItem[count]+"</option>");
+ 		 	var option = $("<option value='"+selectItem+(count+1)+"'>"+changeItem[count]+"</option>");
  			$('#subcategory').append(option);
  		}   
  }
  else if(selectItem == "3") {
-    var option = $("<option value='301' selected disable>"+changeItem[selectItem-1]+"</option>");
+    var option = $("<option value='3' selected disable>"+changeItem[selectItem-1]+"</option>");
     $('#subcategory').append(option);
  }
  else{
-     var option = $("<option value='401' selected disable>"+changeItem[selectItem-1]+"</option>");
+     var option = $("<option value='4' selected disable>"+changeItem[selectItem-1]+"</option>");
     $('#subcategory').append(option);
  }
   
 }
-  
-  
+
+
+$(".imgfile").change(function(){
+    var index = $(".imgfile").index(this) + 1;
+    if(this.files && this.files[0]) {
+        var reader = new FileReader;
+        reader.onload = function(data) {
+            $('#img'+index+' img').attr("src", data.target.result).width(150);
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+});
+function addProduct() {
+    const formData = new FormData();
+
+    var param = {
+        categoryNo : $("#subcategory option:selected").val(),
+        productName : $("[name=productName]").val(),
+        productCnt : $("[name=productStock]").val(),
+        productPrice : $("[name=productPrice]").val(),
+    }
+    var img = new Array();
+    img.push($("#file1").val());
+    img.push($("#file2").val());
+    img.push($("#file3").val())
+    formData.append("img",img);
+    formData.append("json",new Blob([JSON.stringify(param)],{type:"application/json}"}));
+    console.log(param);
+    $.ajax({
+        url: '/admin/addProduct',
+        type: 'POST',
+        // contentType: 'multipart/form-data',
+        enctype: "multipart/form-data",
+        data: formData,
+        success: function (data) {
+            alert("장바구니에 상품이 담겼습니다.");
+        },
+        error: function (request, status, error) {
+            alert("code = " + request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
+        }
+    })
+}
   
   
   

@@ -1,10 +1,8 @@
 package bebeshop.bebeshopapi.dto;
 
-import bebeshop.bebeshopapi.service.ProductV2;
 import lombok.Data;
 
 import java.util.List;
-import java.util.Map;
 
 @Data
 public class CartRequestDto {
@@ -14,7 +12,7 @@ public class CartRequestDto {
     private Long productNo;
     private Long count;
     private List<Long> productNoList;
-    private List<ProductV2> productList;
+    private List<ProductRequestDto> productList;
     private List<Long> cartNoList;
     private String btn;
 

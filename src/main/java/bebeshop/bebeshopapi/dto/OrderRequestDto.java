@@ -1,6 +1,5 @@
 package bebeshop.bebeshopapi.dto;
 
-import bebeshop.bebeshopapi.service.ProductV2;
 import lombok.Data;
 
 import java.util.List;
