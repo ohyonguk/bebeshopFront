@@ -53,6 +53,13 @@ public class AdminController {
 
     }
 
+    @PostMapping("/admin/deleteProduct")
+    public String deleteProduct(@RequestBody ProductRequestDto productRequestDto, HttpServletRequest req ) throws Exception {
+
+        return "1";
+
+    }
+
     @GetMapping("/admin/product_mng")
     public String productMng(HttpServletRequest req , HttpSession httpSession){
         ProductRequestDto productRequest =new ProductRequestDto();

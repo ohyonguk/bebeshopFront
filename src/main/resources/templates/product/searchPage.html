@@ -50,7 +50,7 @@
             <div class="probxs">
                 <th:block th:each="list : ${list}">
                     <div class="probx">
-                        <a th:href="@{/product/detail/{productNo}(productNo = ${list.productNo})}"> <img th:src="@{/img/call.png}" alt="a">
+                        <a th:href="@{/product/detail/{productNo}(productNo = ${list.productNo})}"> <img th:src="${list.productImg1}" alt="a">
                             <h1 th:text="${list.productName}"></h1>
                             <div class="price">
                                 <h4 th:text="${list.productPrice}+원"></h4>
